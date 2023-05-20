@@ -1,33 +1,44 @@
-## 提交表单数据
-1、注意必须手动设置 rules 和 model 否则表单校验不会生效
-	```bash
-		this.$refs.form1.setRules(rules)
-	```
-	
-2、表单中的 prop 会严格映射 rules中 对应的字段
+# 只需要维护JSON数据、定义不同类型完成表单自动生成
 
-## 坑点：
-1、源码校验核心child.prop, 所以手动设置 rules 和 model的重要性
-   ```bash
-	 const rule = this.formRules[child.prop];
-	 // 如果不存在对应的规则，直接返回，否则校验器会报错
-	 if (!rule) return;
-   ```
-2、
-	```bash
-		const validator = new Schema({
-	       [propertyName]: ruleItem,
-	     });
-	     validator.validate({
-	         [propertyName]: propertyVal,
-	       },
-	       (errors, fields) => {
-	         if (uni.$u.test.array(errors)) {
-	           errorsRes.push(...errors);
-	           childErrors.push(...errors);
-	         }
-	         child.message =
-	           childErrors[0]?.message ?? null;
-	       }
-	    );
-   ```
+```bash
+export const answerInfoList = [
+ {
+  id: "A1",
+  type: 'radio',
+  title: '您的生活乐趣今年增加了么',
+  actions: [{
+    parent: "A1",
+    id: '1',
+    name: '大幅增加',
+    disabled: false
+   },
+   {
+    parent: "A1",
+    id: '2',
+    name: '增加',
+    disabled: false
+   },
+   {
+    parent: "A1",
+    id: '3',
+    name: '不变',
+    disabled: false
+   },
+   {
+    parent: "A1",
+    id: '4',
+    name: '减少',
+    disabled: false
+   },
+   {
+    parent: "A1",
+    id: '5',
+    name: '大幅减少',
+    disabled: false
+   }
+  ]
+ }
+]
+
+
+```
