@@ -1,0 +1,20 @@
+{
+	"pages": [ 
+		{
+			"path": "pages/answer/index",
+			"style": {
+				"navigationBarTitleText": "调查问卷",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		// 导航栏标题颜色及状态栏前景颜色
+		"navigationBarTextStyle": "black",
+		// 导航栏背景颜色（同状态栏背景色）
+		"navigationBarBackgroundColor": "#F8F8F8",
+		// 下拉显示出来的窗口的背景色
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

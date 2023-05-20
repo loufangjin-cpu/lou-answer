@@ -1,0 +1,21 @@
+######################################################################
+# Build Tools
+
+/unpackage/*
+/node_modules/*
+
+######################################################################
+# Development Tools
+
+/.idea/*
+/.vscode/*
+/.hbuilderx/*
+
+package-lock.json
+yarn.lock
+
+node_modules/
+.project
+unpackage/
+.DS_Store
+
